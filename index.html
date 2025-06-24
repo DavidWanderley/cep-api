@@ -14,46 +14,62 @@
   <body>
     <h1>Consultar Cep</h1>
 
-    <form>
-      <label class="form-label" for="cep">CEP</label>
-      <input
-        type="number"
-        id="cep"
-        class="form-control"
-        placeholder="Digite o CEP"
-        required
-      />
+    <form class="row g-3">
+      <div class="col-md-2">
+        <label class="form-label" for="cep">CEP</label>
+        <input
+          type="number"
+          id="cep"
+          class="form-control"
+          placeholder="Digite o CEP"
+          required
+        />
+      </div>
 
-      <label class="form-label" for="logradouro">Logradouro</label>
-      <input type="text" id="logradouro" class="form-control" />
+      <div class="col-md-6">
+        <label class="form-label" for="logradouro">Logradouro</label>
+        <input type="text" id="logradouro" class="form-control" />
+      </div>
 
-      <label class="form-label" for="cep">Numero</label>
-      <input type="number" id="numero" class="form-control" />
+      <div class="col-md-2">
+        <label class="form-label" for="cep">Nº</label>
+        <input type="number" id="numero" class="form-control" />
+      </div>
 
-      <label class="form-label" for="cep">Complemento</label>
-      <input type="text" id="complemento" class="form-control" />
+      <div class="col-md-10">
+        <label class="form-label" for="cep">Complemento</label>
+        <input type="text" id="complemento" class="form-control" />
+      </div>
 
-      <label class="form-label" for="cep">Bairro</label>
-      <input type="text" id="bairro" class="form-control" />
+      <div class="col-md-6">
+        <label class="form-label" for="cep">Bairro</label>
+        <input type="text" id="bairro" class="form-control" />
+      </div>
 
-      <label class="form-label" for="cep">UF</label>
-      <select class="form-select" aria-label="Default select example">
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
+      <div class="col-md-2">
+        <label class="form-label" for="cep">UF</label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Open this select menu</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
 
-      <label class="form-label" for="cep">Localidade</label>
-     <select class="form-select" aria-label="Default select example">
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
-      
-      <button class="btn btn-primary" type="submit">Enviar</button>
-      <button class="btn btn-secondary" type="reset">Limpar</button>
+      <div class="col-md-2">
+        <label class="form-label" for="cep">Localidade</label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Open this select menu</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+
+      <div class="col-md-12">
+        <button class="btn btn-success" type="submit">Enviar</button>
+        <button class="btn btn-danger" type="reset">Limpar</button>
+      </div>
     </form>
 
     <script
