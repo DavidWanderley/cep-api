@@ -22,6 +22,7 @@
           id="cep"
           class="form-control"
           placeholder="Digite o CEP"
+          onblur="consultarCep()"
           required
         />
       </div>
@@ -36,6 +37,11 @@
         <input type="number" id="numero" class="form-control" />
       </div>
 
+      <div class="col-md-2">
+        <label class="form-label" for="ddd">ddd</label>
+        <input type="number" id="ddd" class="form-control" />
+      </div>
+
       <div class="col-md-10">
         <label class="form-label" for="cep">Complemento</label>
         <input type="text" id="complemento" class="form-control" />
@@ -48,11 +54,35 @@
 
       <div class="col-md-2">
         <label class="form-label" for="cep">UF</label>
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Open this select menu</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+        <select class="form-select" aria-label="Default select example" id="uf">
+          <option selected disabled>Selecione um estado</option>
+          <option value="AC">Acre (AC)</option>
+          <option value="AL">Alagoas (AL)</option>
+          <option value="AP">Amapá (AP)</option>
+          <option value="AM">Amazonas (AM)</option>
+          <option value="BA">Bahia (BA)</option>
+          <option value="CE">Ceará (CE)</option>
+          <option value="DF">Distrito Federal (DF)</option>
+          <option value="ES">Espírito Santo (ES)</option>
+          <option value="GO">Goiás (GO)</option>
+          <option value="MA">Maranhão (MA)</option>
+          <option value="MT">Mato Grosso (MT)</option>
+          <option value="MS">Mato Grosso do Sul (MS)</option>
+          <option value="MG">Minas Gerais (MG)</option>
+          <option value="PA">Pará (PA)</option>
+          <option value="PB">Paraíba (PB)</option>
+          <option value="PR">Paraná (PR)</option>
+          <option value="PE">Pernambuco (PE)</option>
+          <option value="PI">Piauí (PI)</option>
+          <option value="RJ">Rio de Janeiro (RJ)</option>
+          <option value="RN">Rio Grande do Norte (RN)</option>
+          <option value="RS">Rio Grande do Sul (RS)</option>
+          <option value="RO">Rondônia (RO)</option>
+          <option value="RR">Roraima (RR)</option>
+          <option value="SC">Santa Catarina (SC)</option>
+          <option value="SP">São Paulo (SP)</option>
+          <option value="SE">Sergipe (SE)</option>
+          <option value="TO">Tocantins (TO)</option>
         </select>
       </div>
 
