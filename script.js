@@ -17,6 +17,7 @@ const consultarCep = () => {
       document.getElementById("bairro").value = json.district;
       document.getElementById("uf").value = uf;
 
+      carregarEstado(uf);
       carregarCidadesPorUF(uf, cidade);
     });
 };
@@ -36,6 +37,29 @@ const carregarCidadesPorUF = (uf, cidadeSelecionada = "") => {
         option.text = cidade.nome;
 
         if (cidade.nome.toLowerCase() === cidadeSelecionada.toLowerCase()) {
+          option.selected = true;
+        }
+
+        select.appendChild(option);
+      });
+    });
+};
+
+const carregarEstado = (ufSelecionada) => {
+  const url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados`;
+
+  fetch(url)
+    .then((response) => response.json())
+    .then((estados) => {
+      const select = document.getElementById("uf");
+      select.innerHTML = '<option disabled selected>Selecione uma estado</option>';
+
+      estados.forEach((estado) => {
+        const option = document.createElement("option");
+        option.value = estado.nome;
+        option.text = estado.nome;
+
+        if (estado.sigla.toLowerCase() === ufSelecionada.toLowerCase()) {
           option.selected = true;
         }
 
